@@ -1,14 +1,27 @@
-# Backdoor
-En este repositorio encontrarás una backdoor en Python para establecer una conexión desde una máquina víctima a la atacante.
-# Uso:
-1- Modificar las variables del archivo **exploit.py** y **listener.py**.
+# Backdoor - Python Reverse Shell
 
-2- Ejecutar los scripts en las respectivas máquinas:
+This repository contains a Python-based backdoor designed to establish a reverse shell connection from a victim machine to an attacker-controlled machine. The project is intended for educational purposes and controlled penetration testing only.
 
-Máquina atancante:
-  
-    python3 listener.py
-    
-Maquina víctima:
-  
-    python3 exploit.py
+---
+
+## Features
+- Simple setup and execution.
+- Configurable IP and port variables for flexibility.
+- Two scripts:  
+  - `listener.py`: Listens for incoming connections on the attacker's machine.  
+  - `exploit.py`: Initiates the connection from the victim's machine.
+
+---
+
+## Usage
+
+### 1. Modify Configuration
+Edit the IP address and port variables in both **`exploit.py`** and **`listener.py`** to match your environment.
+
+### 2. Execute the Scripts
+Run the scripts on their respective machines:
+
+#### Attacker's Machine:
+Start the listener to wait for the incoming connection:
+```bash
+python3 listener.py
